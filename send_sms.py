@@ -10,6 +10,7 @@ MATT_NUM = os.environ['MATT_NUM']
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
+# SMS: INDIVIDUAL RECIPIENT
 # message = client.messages \
 #     .create(
 #          body='This is the ship that made the Kessel Run in fourteen parsecs?',
@@ -19,7 +20,7 @@ client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 # print(message.sid)
 
-
+# SMS: MULTIPLE RECIPIENTS
 numbers_to_message = [MY_NUM, TEST_NUM]
 
 for number in numbers_to_message:
@@ -33,7 +34,7 @@ for number in numbers_to_message:
 
     print(message.sid)
 
-
+# MMS: INDIVIDUAL RECIPIENT
 # message = client.messages \
 #     .create(
 #          body='MMS test text message',
